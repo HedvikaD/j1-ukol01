@@ -24,6 +24,28 @@ public class HlavniProgram {
     zofka.turnLeft(90);
 
     nakresliNozicku();
+
+    zofka.turnRight(45);
+    zofka.penUp();
+    zofka.move(200);
+    zofka.penDown();
+
+    nakresliOsmiuhelnik();
+
+    zofka.penUp();
+    zofka.move(300);
+    zofka.penDown();
+
+    nakresliKolečko();
+
+    zofka.penUp();
+    zofka.turnLeft(90);
+    zofka.move(200);
+    zofka.penDown();
+
+    nakresliSluníčko();
+
+
   }
 
   public void nakresliNozicku() {
@@ -35,7 +57,6 @@ public class HlavniProgram {
     zofka.move(40);
     zofka.turnRight(180);
     zofka.move(40);
-
   }
 
   public void nakresliPrasatko() {
@@ -52,6 +73,33 @@ public class HlavniProgram {
     zofka.move(100);
     zofka.turnRight(90);
     zofka.move(100);
+  }
+
+  public void nakresliOsmiuhelnik() {
+     for (int i = 0; i < 8; i++) {
+     zofka.move(100);
+     zofka.turnRight(45);
+     }
+
+    }
+
+  public void nakresliKolečko() {
+      for (int i = 0; i < 24; i++) {
+        zofka.move(20);
+        zofka.turnRight(15);
+      }
+
+    }
+
+  public void nakresliSluníčko() {
+     for (int i = 0; i < 24; i++) {
+     zofka.move(20);
+     zofka.turnRight(90);
+     zofka.move(20);
+     zofka.turnLeft(180);
+     zofka.move(20);
+     zofka.turnRight(75);
+     }
   }
 
 }
